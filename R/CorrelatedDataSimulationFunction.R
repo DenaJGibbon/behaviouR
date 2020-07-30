@@ -1,9 +1,9 @@
-#' Title
+#' This function simulates a population of deer males where reproductive success is correlated with body size
 #'
-#' @param N
-#' @param CorrelationCoefficient
-#' @param MaleMeanBodyWeight
-#' @param MaleReproductiveSuccess
+#' @param N the number of individuals in the simulated population
+#' @param CorrelationCoefficient the correlation value of the two variables
+#' @param MaleMeanBodyWeight mean body weight of males in the population
+#' @param MaleReproductiveSuccess mean male reproductice success
 #'
 #' @return
 #' @export CorrelatedDataSimulationFunction
