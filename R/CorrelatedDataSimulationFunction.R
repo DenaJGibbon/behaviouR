@@ -3,16 +3,16 @@
 #' @param N
 #' @param CorrelationCoefficient
 #' @param MaleMeanBodyWeight
-#' @param MeanFemalesInHarem
+#' @param MaleReproductiveSuccess
 #'
 #' @return
-#' @export
+#' @export CorrelatedDataSimulationFunction
 #'
 #' @examples
 
 CorrelatedDataSimulationFunction <- function(N=100,CorrelationCoefficient=0.83,
                                              MaleMeanBodyWeight = 125,
-                                             MeanFemalesInHarem = 3){
+                                             MaleReproductiveSuccess = 3){
 
 # First we assign the number of observations we want to have in our dataset; I start with 100.
 NObservations <- N
@@ -25,19 +25,19 @@ MaleMeanBodyWeight <- MaleMeanBodyWeight
 
 
 # Fourth we assign a mean number of females in a male's harem
-MeanFemalesInHarem <- MeanFemalesInHarem
+MaleReproductiveSuccess <- MaleReproductiveSuccess
 
 # Now, we use a fancy data simulator to simulate our correlated data
-MaleRedDeerSimulatedData = mvrnorm(n=NObservations, mu=c(MaleMeanBodyWeight, MeanFemalesInHarem), Sigma=matrix(c(1, CorrelationCoefficient, CorrelationCoefficient, 1), nrow=2), empirical=TRUE)
+MaleRedDeerSimulatedData = mvrnorm(n=NObservations, mu=c(MaleMeanBodyWeight, MaleReproductiveSuccess), Sigma=matrix(c(1, CorrelationCoefficient, CorrelationCoefficient, 1), nrow=2), empirical=TRUE)
 
 # We isloate our new data
 MaleBodyWeight = MaleRedDeerSimulatedData[, 1]
-FemalesInHarem= MaleRedDeerSimulatedData[, 2]
+MaleReproductiveSuccess= MaleRedDeerSimulatedData[, 2]
 
 # Check the correlation of the data to make sure it matches our specified correlation
-cor(MaleBodyWeight,FemalesInHarem)
+cor(MaleBodyWeight,MaleReproductiveSuccess)
 
 # We then combine our data into a new dataframe
-MaleRedDeerDF <- cbind.data.frame(MaleBodyWeight,FemalesInHarem)
+MaleRedDeerDF <- cbind.data.frame(MaleBodyWeight,MaleReproductiveSuccess)
 return(MaleRedDeerDF)
 }
