@@ -17,12 +17,28 @@ BiplotAddSpectrograms <- function(input.dir.Focal="FocalRecordings",
 
 
 Focal.exemplars <- list.files(input.dir.Focal, full.names = T,pattern = '.wav')
-col.index <- unique(FeatureDataframe$Class)
-color.vals <-c('black','red')
 
 print('Completing Step 1 of 3')
+shadesOfGrey <- colorRampPalette(c("grey0", "grey100"))
+for(a in 1:length(Focal.exemplars)){
+short.temp.wav <-readWave(Focal.exemplars[a])
+Fs <- short.temp.wav@samp.rate
+step <- trunc(5*Fs/1000)             # one spectral slice every 5 ms
+window <- trunc(20*Fs/1000)          # 40 ms data window
+fftn <- 2^ceiling(log2(abs(window))) # next highest power of 2
+spg <- specgram(x=short.temp.wav@left, n=fftn, Fs=Fs, window=window, overlap = 95)
+S <- abs(spg$S[2:(fftn*4000/Fs),])   # magnitude in range 0<f<=4000 Hz.
+S <- S/max(S)         # normalize magnitude so that max is 0 dB.
+S[S < 10^(-40/10)] <- 10^(-40/10)    # clip below -40 dB.
+S[S > 10^(-3/10)] <- 10^(-3/10)      # clip above -3 dB.
 
+png(file=paste(input.dir.Focal,'/','Thumbnails/',a,'Focal.png',sep=''), width = 8, height = 4, units = 'in', res = 300)
+image(t(20*log10(S)),
+      col = rev(shadesOfGrey(512)),axes=F,ylim=c(0,0.5))
+graphics.off()
+}
 
+FeatureDataframe <- MFCCFunction(input.dir = "FocalRecordings")
 
 pca.out <- prcomp(FeatureDataframe[,-c(1)], scale. = TRUE)
 cluster.id.df <- cbind.data.frame(pca.out$x[,1:2],FeatureDataframe$Class)
@@ -32,9 +48,8 @@ cluster.id.df$Class <- as.factor(cluster.id.df$Class)
 print('Completing Step 2 of 3')
 my_plot <- ggplot(data=cluster.id.df, aes(x=Comp.1,y=Comp.2,colour=Class))+
   geom_point()+
-  #geom_text(label=cluster.id.df$cluster.id)+
-  scale_color_manual(values =color.vals)+
-  theme_bw()+xlim(xmin,xmax)+ylim(ymin,ymax)
+  #geom_text(label=rownames(cluster.id.df))+
+  theme_bw()#+xlim(xmin,xmax)+ylim(ymin,ymax)
 
 my_plot
 
@@ -45,16 +60,15 @@ for(y in 1:length(Focal.exemplars)) {
   figure1.png <- image_trim(magick::image_read(paste(input.dir.Focal,'/','Thumbnails/',y,'Focal.png',sep='')))
   figure1.png <- image_modulate(figure1.png,brightness = 150)
 
-  figure1.png <- image_border(figure1.png,col=color.vals[cluster.id.df[y,]$Class==col.index])
 
   figure1.png <- as.raster(figure1.png)
   #exemplar.index <- Focal.cluster.results@idx[y]
 
   clust.df.subset <- cluster.id.df[y,]
-  xmin= clust.df.subset$Comp.1-4
-  xmax=clust.df.subset$Comp.1+4
-  ymin=clust.df.subset$Comp.2 +2
-  ymax=clust.df.subset$Comp.2 -2
+  xmin= clust.df.subset$Comp.1-2
+  xmax=clust.df.subset$Comp.1+2
+  ymin=clust.df.subset$Comp.2 +0.5
+  ymax=clust.df.subset$Comp.2 -0.5
   my_plot <-
     my_plot + annotation_raster(figure1.png, xmin,xmax,ymin,ymax)
 }

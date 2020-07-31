@@ -2,22 +2,33 @@
 % Please edit documentation in R/SpectrogramSingle.R
 \name{SpectrogramSingle}
 \alias{SpectrogramSingle}
-\title{Title}
+\title{Code to calculate a spectrogram for a single sound file}
 \usage{
 SpectrogramSingle(
   sound.file,
   min.freq = 500,
   max.freq = 8000,
   Colors = "BW",
-  downsample = TRUE
+  downsample = TRUE,
+  downsample.new = 16000
 )
 }
 \arguments{
-\item{downsample}{}
+\item{sound.file}{The location of the .wav file}
+
+\item{min.freq}{The minimum frequency (Hz) of the signal of interest}
+
+\item{max.freq}{The maximum frequency (Hz) of the signal of interest}
+
+\item{Colors}{Whether to return a black and white or color spectrogram}
+
+\item{downsample}{If the sound file should be downsampled before creating the spectrogram}
+
+\item{downsample.new}{<- The frequency (Hz) to downsample to}
 }
 \value{
 
 }
 \description{
-Title
+Code to calculate a spectrogram for a single sound file
 }

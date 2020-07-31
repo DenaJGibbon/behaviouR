@@ -1,23 +1,23 @@
-#' Title
+#' Code to calculate a spectrogram for a single sound file
 #'
-#' @param sound.file
-#' @param min.freq
-#' @param max.freq
-#' @param Colors
-#' @param downsample
-#'
+#' @param sound.file The location of the .wav file
+#' @param min.freq The minimum frequency (Hz) of the signal of interest
+#' @param max.freq The maximum frequency (Hz) of the signal of interest
+#' @param Colors Whether to return a black and white or color spectrogram
+#' @param downsample If the sound file should be downsampled before creating the spectrogram
+#' @param downsample.new <- The frequency (Hz) to downsample to
 #' @return
 #' @export
 #'
 #' @examples
 
 SpectrogramSingle <- function(sound.file, min.freq = 500,max.freq=8000,
-                              Colors='BW',downsample=TRUE) {
+                              Colors='BW',downsample=TRUE,downsample.new=16000) {
 
   short.wav <- readWave(sound.file)
   if(downsample==TRUE){
   if(short.wav@samp.rate > 20000){
-    short.wav <- downsample(short.wav,16000)
+    short.wav <- downsample(short.wav,downsample.new)
   }}
   Name <- str_split_fixed(sound.file,pattern = '.wav',n=2)[,1]
   Name <- str_split_fixed(Name,pattern = '/',n=2)[,2]

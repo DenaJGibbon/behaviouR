@@ -1,10 +1,11 @@
-#' Title
+#' A function to calculate spectrograms over a set of focal recordings
 #'
-#' @param input.dir
-#' @param min.freq
-#' @param max.freq
-#' @param Colors
-#'
+#' @param input.dir The location of the .wav files
+#' @param min.freq The minimum frequency (Hz) of the signal of interest
+#' @param max.freq The maximum frequency (Hz) of the signal of interest
+#' @param Colors Whether to return a black and white or color spectrogram
+#' @param downsample If the sound file should be downsampled before creating the spectrogram
+#' @param downsample.new <- The frequency (Hz) to downsample to
 #' @return
 #' @export
 #'

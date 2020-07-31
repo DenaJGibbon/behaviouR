@@ -2,7 +2,7 @@
 % Please edit documentation in R/MFCCFunctionSite.R
 \name{MFCCFunctionSite}
 \alias{MFCCFunctionSite}
-\title{Title}
+\title{Function to calculate Mel-frequency cepstral coefficents over a list of soundscape recordings}
 \usage{
 MFCCFunctionSite(
   input.dir,
@@ -13,11 +13,19 @@ MFCCFunctionSite(
 )
 }
 \arguments{
-\item{num.cep}{}
+\item{input.dir}{where the .wav files are stored}
+
+\item{min.freq}{the minimum frequency (Hz) of the signal of interest}
+
+\item{max.freq}{the maximum frequency (Hz) of the signal of interest}
+
+\item{n.windows}{the number of time windows to divide the signal by}
+
+\item{num.cep}{the number of cepstra to calculate for each time window}
 }
 \value{
 
 }
 \description{
-Title
+Function to calculate Mel-frequency cepstral coefficents over a list of soundscape recordings
 }

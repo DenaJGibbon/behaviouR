@@ -1,10 +1,10 @@
-#' Title
+#' Function to calculate Mel-frequency cepstral coefficents over a list of soundscape recordings
 #'
-#' @param input.dir
-#' @param min.freq
-#' @param max.freq
-#' @param n.windows
-#' @param num.cep
+#' @param input.dir where the .wav files are stored
+#' @param min.freq the minimum frequency (Hz) of the signal of interest
+#' @param max.freq the maximum frequency (Hz) of the signal of interest
+#' @param n.windows the number of time windows to divide the signal by
+#' @param num.cep the number of cepstra to calculate for each time window
 #'
 #' @return
 #' @export

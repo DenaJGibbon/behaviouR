@@ -2,16 +2,26 @@
 % Please edit documentation in R/SpectrogramFunction.R
 \name{SpectrogramFunction}
 \alias{SpectrogramFunction}
-\title{Title}
+\title{A function to calculate spectrograms over a set of focal recordings}
 \usage{
 SpectrogramFunction(input.dir, min.freq = 500, max.freq = 2500, Colors = "BW")
 }
 \arguments{
-\item{Colors}{}
+\item{input.dir}{The location of the .wav files}
+
+\item{min.freq}{The minimum frequency (Hz) of the signal of interest}
+
+\item{max.freq}{The maximum frequency (Hz) of the signal of interest}
+
+\item{Colors}{Whether to return a black and white or color spectrogram}
+
+\item{downsample}{If the sound file should be downsampled before creating the spectrogram}
+
+\item{downsample.new}{<- The frequency (Hz) to downsample to}
 }
 \value{
 
 }
 \description{
-Title
+A function to calculate spectrograms over a set of focal recordings
 }
