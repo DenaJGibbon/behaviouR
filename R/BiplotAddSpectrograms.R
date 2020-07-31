@@ -1,17 +1,11 @@
-#' Title
+#' Function to create a principal components biplot and add spectrograms
 #'
-#' @param input.dir.Focal
-#' @param xmax
-#' @param xmin
-#' @param ymax
-#' @param ymin
-#'
+#' @param input.dir.Focal location of your focal recordings
 #' @return
 #' @export
 #'
 #' @examples
-BiplotAddSpectrograms <- function(input.dir.Focal="FocalRecordings",
-                                  xmax=15,xmin=-15,ymax=10,ymin=-10)
+BiplotAddSpectrograms <- function(input.dir.Focal="FocalRecordings")
   {
 
 
@@ -48,21 +42,18 @@ cluster.id.df$Class <- as.factor(cluster.id.df$Class)
 print('Completing Step 2 of 3')
 my_plot <- ggplot(data=cluster.id.df, aes(x=Comp.1,y=Comp.2,colour=Class))+
   geom_point()+
-  #geom_text(label=rownames(cluster.id.df))+
-  theme_bw()#+xlim(xmin,xmax)+ylim(ymin,ymax)
+  theme_bw()
 
 my_plot
 
 print('Completing Step 3 of 3')
 for(y in 1:length(Focal.exemplars)) {
 
-  #print(y, 'out of', length(Focal.exemplars))
   figure1.png <- image_trim(magick::image_read(paste(input.dir.Focal,'/','Thumbnails/',y,'Focal.png',sep='')))
   figure1.png <- image_modulate(figure1.png,brightness = 150)
 
 
   figure1.png <- as.raster(figure1.png)
-  #exemplar.index <- Focal.cluster.results@idx[y]
 
   clust.df.subset <- cluster.id.df[y,]
   xmin= clust.df.subset$Comp.1-2

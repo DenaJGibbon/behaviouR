@@ -2,22 +2,16 @@
 % Please edit documentation in R/BiplotAddSpectrograms.R
 \name{BiplotAddSpectrograms}
 \alias{BiplotAddSpectrograms}
-\title{Title}
+\title{Function to create a principal components biplot and add spectrograms}
 \usage{
-BiplotAddSpectrograms(
-  input.dir.Focal = "FocalRecordings",
-  xmax = 15,
-  xmin = -15,
-  ymax = 10,
-  ymin = -10
-)
+BiplotAddSpectrograms(input.dir.Focal = "FocalRecordings")
 }
 \arguments{
-\item{ymin}{}
+\item{input.dir.Focal}{location of your focal recordings}
 }
 \value{
 
 }
 \description{
-Title
+Function to create a principal components biplot and add spectrograms
 }
