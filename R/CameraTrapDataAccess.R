@@ -13,11 +13,10 @@
 
 CameraTrapDataAccess <- function(
   urlpath= 'https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped/',
-  season= 1, AnimalID='leopard', NumPhotos= 5,create.dir=TRUE){
+  season= 4, AnimalID='leopard', NumPhotos= 5,create.dir=TRUE){
 
 
 dataSet <- paste('season',season,'df','.rda',sep = '')
-
 
 githubURL <- paste('https://github.com/DenaJGibbon/behaviouRdata/raw/master/data/',dataSet,sep='')
 CameraTrapDf <- get(load(url(githubURL)))
