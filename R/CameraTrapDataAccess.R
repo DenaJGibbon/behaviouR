@@ -19,7 +19,7 @@ CameraTrapDataAccess <- function(
 dataSet <- paste('season',season,'df','.rda',sep = '')
 
 
-githubURL <- paste('https://github.com/DenaJGibbon/behaviouR/raw/master/data/',dataSet,sep='')
+githubURL <- paste('https://github.com/DenaJGibbon/behaviouRdata/raw/master/data/',dataSet,sep='')
 
 CameraTrapDf <- get(load(url(githubURL)))
 CameraTrapDf
