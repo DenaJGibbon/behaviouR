@@ -4,7 +4,12 @@
 \alias{SpectrogramFunctionSite}
 \title{Function to create spectrograms for soundscape recordings}
 \usage{
-SpectrogramFunctionSite(input.dir, min.freq = 500, max.freq = 2500)
+SpectrogramFunctionSite(
+  input.dir,
+  min.freq = 500,
+  max.freq = 2500,
+  Colors = "BW"
+)
 }
 \arguments{
 \item{input.dir}{The location of the .wav files}
