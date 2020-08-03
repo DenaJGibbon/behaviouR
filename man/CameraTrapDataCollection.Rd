@@ -7,7 +7,8 @@
 CameraTrapDataCollection(
   inputfile = CombinedAnimalDF,
   rowstart = 1,
-  dataframe.cont = FALSE
+  dataframe.cont = FALSE,
+  option = "Viewer"
 )
 }
 \arguments{

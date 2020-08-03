@@ -3,13 +3,14 @@
 #' @param inputfile the dataframe output by the CameraTrapDataAccess function
 #' @param rowstart if data collection was interrupted using the command 'break' which row to use to resume
 #' @param dataframe.cont logical; change to 'TRUE' if data collection was interrupted
+#' @param dataframe.cont logical; change to 'TRUE' if data collection was interrupted
 #'
 #' @return
 #' @export
 #'
 #' @examples
 CameraTrapDataCollection <- function(inputfile=CombinedAnimalDF,rowstart=1,
-                                     dataframe.cont=FALSE){
+                                     dataframe.cont=FALSE,option='Viewer'){
 
 if(dataframe.cont==TRUE){
   validation.df <-  CombinedAnimalDF_TimeAdded
@@ -18,9 +19,17 @@ if(dataframe.cont==TRUE){
 }
 
 for(a in rowstart:nrow(inputfile)){
+  if(option=='Viewer'){
+
   temp.detection.df <- inputfile[a,]
   print(image_read(as.character(temp.detection.df$filename)))
+  }
 
+  if(option=='Plot'){
+    temp.detection.df <- inputfile[a,]
+    temp.image <- (magick::image_read(as.character(temp.detection.df$filename)))
+    print(image_ggplot(temp.image))
+  }
 
   Time <- readline(prompt = "Time taken? ")
   if(Time== 'break'){
