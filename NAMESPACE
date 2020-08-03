@@ -3,6 +3,7 @@
 export(BiplotAddSpectrograms)
 export(CameraTrapAnnotations)
 export(CameraTrapDataAccess)
+export(CameraTrapDataCollection)
 export(CorrelatedDataSimulationFunction)
 export(MFCCFunction)
 export(MFCCFunctionSite)

@@ -6,14 +6,22 @@
 \usage{
 CameraTrapDataAccess(
   urlpath = "https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped/",
-  season = 4,
+  season = list(1, 2),
   AnimalID = "leopard",
   NumPhotos = 5,
   create.dir = TRUE
 )
 }
 \arguments{
-\item{create.dir}{}
+\item{urlpath}{location of Snapshot Serengeti database}
+
+\item{season}{which season to query; options are 1-4, 6-8,10,11}
+
+\item{AnimalID}{which animal photos to download}
+
+\item{NumPhotos}{the number of photos to download}
+
+\item{create.dir}{logical; create a new directory (TRUE) or save to current working directory (FALSE)}
 }
 \value{
 

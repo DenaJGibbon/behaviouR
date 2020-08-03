@@ -7,7 +7,7 @@
 CameraTrapAnnotations(season = 4)
 }
 \arguments{
-\item{season}{which season to download; options are 1-4, 6-8,10,11}
+\item{season}{which season to query; options are 1-4, 6-8,10,11}
 }
 \value{
 

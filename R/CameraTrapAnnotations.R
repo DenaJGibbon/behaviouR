@@ -1,6 +1,6 @@
 #' Function to create a table of available camera trap annotations by season
 #'
-#' @param season which season to download; options are 1-4, 6-8,10,11
+#' @param season which season to query; options are 1-4, 6-8,10,11
 #'
 #' @return
 #' @export
