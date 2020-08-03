@@ -5,7 +5,10 @@
 #' @param max.freq the maximum frequency (Hz) of the signal of interest
 #' @param n.windows the number of time windows to divide the signal by
 #' @param num.cep the number of cepstra to calculate for each time window
-#'
+#' @importFrom tuneR readWave
+#' @importFrom stringr str_split_fixed
+#' @importFrom seewave duration
+#' @importFrom tuneR melfcc
 #' @return
 #' @export
 #'
@@ -23,7 +26,7 @@ MFCCFunction <-
 
 
     mfcc.vector.list <- list()
-    Class <- str_split_fixed(call.timing.list.short,pattern = '_',n=2)[,1]
+    Class <- stringr::str_split_fixed(call.timing.list.short,pattern = '_',n=2)[,1]
     for(x in 1:length(subsamps)){
       print(paste("processing sound event", x, 'out of',length(subsamps) ))
 
@@ -37,7 +40,7 @@ MFCCFunction <-
                                      numcep = num.cep, wintime = win.time)
 
       # Calculate delta cepstral coefficients
-      deltas.output <- deltas(melfcc.output)
+      deltas.output <- tuneR::deltas(melfcc.output)
 
       # Ensure only same number of time windows are used for MFCC and delta coefficients Also append .wav duration
       mfcc.vector <- c(as.vector(t(melfcc.output[1:(n.windows - 1), 2:num.cep])), as.vector(t(deltas.output[1:(n.windows - 1), 2:num.cep])), wav.dur)
@@ -45,7 +48,7 @@ MFCCFunction <-
     }
 
     mfcc.output <- mfcc.vector.list
-    Class <- str_split_fixed(call.timing.list.short,pattern = '_',n=2)[,1]
+    Class <- stringr::str_split_fixed(call.timing.list.short,pattern = '_',n=2)[,1]
 
     mfcc.output.df <- do.call(rbind.data.frame,mfcc.output)
     colnames(mfcc.output.df) <- seq(from=1, to=ncol(mfcc.output.df),by=1)

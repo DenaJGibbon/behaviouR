@@ -5,6 +5,9 @@
 #' @param dataframe.cont logical; change to 'TRUE' if data collection was interrupted
 #' @param dataframe.cont logical; change to 'TRUE' if data collection was interrupted
 #'
+#' @importFrom magick image_ggplot
+#' @importFrom magick image_read
+#'
 #' @return
 #' @export
 #'
@@ -28,7 +31,7 @@ for(a in rowstart:nrow(inputfile)){
   if(option=='Plot'){
     temp.detection.df <- inputfile[a,]
     temp.image <- (magick::image_read(as.character(temp.detection.df$filename)))
-    print(image_ggplot(temp.image))
+    print(magick::image_ggplot(temp.image))
   }
 
   Time <- readline(prompt = "Time taken? ")

@@ -6,12 +6,6 @@
 \usage{
 BiplotAddSpectrograms(input.dir.Focal = "FocalRecordings")
 }
-\arguments{
-\item{input.dir.Focal}{location of your focal recordings}
-}
-\value{
-
-}
 \description{
 Function to create a principal components biplot and add spectrograms
 }

@@ -2,16 +2,22 @@
 % Please edit documentation in R/SpectrogramFunctionSite.R
 \name{SpectrogramFunctionSite}
 \alias{SpectrogramFunctionSite}
-\title{Title}
+\title{Function to create spectrograms for soundscape recordings}
 \usage{
 SpectrogramFunctionSite(input.dir, min.freq = 500, max.freq = 2500)
 }
 \arguments{
-\item{max.freq}{}
+\item{input.dir}{The location of the .wav files}
+
+\item{min.freq}{The minimum frequency (Hz) of the signal of interest}
+
+\item{max.freq}{The maximum frequency (Hz) of the signal of interest}
+
+\item{Colors}{Whether to return a black and white or color spectrogram}
 }
 \value{
 
 }
 \description{
-Title
+Function to create spectrograms for soundscape recordings
 }

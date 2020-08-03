@@ -6,6 +6,10 @@
 #' @param Colors Whether to return a black and white or color spectrogram
 #' @param downsample If the sound file should be downsampled before creating the spectrogram
 #' @param downsample.new <- The frequency (Hz) to downsample to
+#' @importFrom stringr str_split_fixed
+#' @importFrom tuneR readWave
+#' @importFrom tuneR downsample
+#' @importFrom signal specgram
 #' @return
 #' @export
 #'
@@ -19,8 +23,8 @@ SpectrogramSingle <- function(sound.file, min.freq = 500,max.freq=8000,
   if(short.wav@samp.rate > 20000){
     short.wav <- downsample(short.wav,downsample.new)
   }}
-  Name <- str_split_fixed(sound.file,pattern = '.wav',n=2)[,1]
-  Name <- str_split_fixed(Name,pattern = '/',n=2)[,2]
+  Name <- stringr::str_split_fixed(sound.file,pattern = '.wav',n=2)[,1]
+  Name <- stringr::str_split_fixed(Name,pattern = '/',n=2)[,2]
 
 
     temp.spec <- signal::specgram(short.wav@left, Fs = short.wav@samp.rate,

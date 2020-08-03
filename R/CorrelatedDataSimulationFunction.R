@@ -4,6 +4,7 @@
 #' @param CorrelationCoefficient the correlation value of the two variables
 #' @param MaleMeanBodyWeight mean body weight of males in the population
 #' @param MaleReproductiveSuccess mean male reproductice success
+#' @importFrom MASS mvrnorm
 #'
 #' @return
 #' @export CorrelatedDataSimulationFunction
