@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Welcome to the github page for the 'behaviouR' package
+# Welcome to the GitHub page for the 'behaviouR' package
 ```{r echo=FALSE, fig.align='center',warning=FALSE, message=FALSE}
 library(ggpubr)
 mainImage <- magick::image_read('/Users/denasmacbook/Desktop/behaviouRtutorials/images/Figure6.pdf')
@@ -26,8 +26,7 @@ Fig6b <- ggdensity(data=AllDataCombined,x='Time',fill = 'category_id',facet.by =
   xlab('Time (24 hrs)') +ylab('Density')+scale_fill_manual(values = c('red','gray','black','blue'))+ theme(legend.title = element_blank())
 
 
-cowplot::plot_grid(Fig6a,Fig6b,scale=c(1.25,0.75),label_x = .9,
-                   labels = c('A','B'))
+cowplot::plot_grid(Fig6a,Fig6b,scale=c(1.25,0.75),label_x = .9)
 
 ```
 

@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Welcome to the github page for the ‘behaviouR’ package
+# Welcome to the GitHub page for the ‘behaviouR’ package
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" style="display: block; margin: auto;" />
 
