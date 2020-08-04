@@ -3,6 +3,8 @@
 
 # Welcome to the github page for the ‘behaviouR’ package
 
+## Getting started
+
 To download the package from GitHub enter the following lines of code
 into R.
 
@@ -12,8 +14,15 @@ install.packages("devtools")
 devtools::install_github("https://github.com/DenaJGibbon/behaviouR")
 ```
 
-The full tutorial can be found here:
+## Accessing R scripts
+
+Links to individual R Scripts can be found
+here:<https://github.com/DenaJGibbon/behaviouRtutorials/tree/master/R%20Scripts%20for%20Labs>
+
+The full tutorials (include scripts as appendices) can be found here:
 <https://bookdown.org/djc426/behaviouR-R-package-tutorials/>.
+
+## Modifying course materials for instructors
 
 You can find and modify the source code for the tutorials by visiting
 <https://github.com/DenaJGibbon/behaviouRtutorials> and downloading a
