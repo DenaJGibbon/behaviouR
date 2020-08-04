@@ -3,7 +3,7 @@
 
 # Welcome to the GitHub page for the ‘behaviouR’ package
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 ## Getting started
 
