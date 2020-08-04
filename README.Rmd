@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 ```
 
 # Welcome to the github page for the 'behaviouR' package
-```{r echo=FALSE,out.width='80%', fig.asp=.75, fig.align='center',warning=FALSE, message=FALSE}
+```{r echo=FALSE, fig.align='center',warning=FALSE, message=FALSE}
 library(ggpubr)
 mainImage <- magick::image_read('/Users/denasmacbook/Desktop/behaviouRtutorials/images/Figure6.pdf')
 Fig6a <- magick::image_ggplot(mainImage)
