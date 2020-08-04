@@ -3,6 +3,8 @@
 
 # Welcome to the github page for the ‘behaviouR’ package
 
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;" />
+
 ## Getting started
 
 To download the package from GitHub enter the following lines of code
@@ -16,11 +18,11 @@ devtools::install_github("https://github.com/DenaJGibbon/behaviouR")
 
 ## Accessing R scripts
 
-Links to individual R Scripts can be found
-here:<https://github.com/DenaJGibbon/behaviouRtutorials/tree/master/R%20Scripts%20for%20Labs>
-
 The full tutorials (include scripts as appendices) can be found here:
 <https://bookdown.org/djc426/behaviouR-R-package-tutorials/>.
+
+Links to individual R Scripts can be found here:
+<https://github.com/DenaJGibbon/behaviouRtutorials/tree/master/R%20Scripts%20for%20Labs>
 
 ## Modifying course materials for instructors
 
