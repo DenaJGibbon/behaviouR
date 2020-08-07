@@ -92,3 +92,41 @@
 #' @source Swanson AB, Kosmala M, Lintott CJ, Simpson RJ, Smith A, Packer C (2015) Snapshot Serengeti, high-frequency annotated camera trap images of 40 mammalian species in an African savanna. Scientific Data 2: 150026.
 #' @source http://lila.science/datasets/snapshot-serengeti
 "CombinedPartnerDFTimes"
+
+#' A dataframe containing simulated focal data from meerkat observations
+#'
+#' This simulated data is based on exercises from 'Vigilance behavour in meerkats'
+#'
+#' @format A data frame with 28 rows and 6 variables:
+#' \describe{
+#'   \item{StartTimeMin}{The start time (minute only) that the behavior started}
+#'   \item{StartTimeSec}{The start time (seconds only) that the behavior started}
+#'   \item{BehaviorCode}{Which behavior the animal engaged in}
+#'   \item{TimeSeconds}{The cumulative time in seconds that the behavior was observed}
+#'   \item{SecondsEngagedinBehavior }{The total time (in seconds) the animal was observed engaging in the behavior}
+#'   \item{Partner}{Which partner collected the data}
+#'   ...
+#' }
+#' @source Hammond 2019, Vigilance behaviour in meerkats, ASAB Education
+#' @source
+"MeerkatFocalData"
+
+#' A dataframe containing simulated scan data from meerkat observations
+#'
+#' This simulated data is based on exercises from 'Vigilance behavour in meerkats'
+#'
+#' @format A data frame with 28 rows and 6 variables:
+#' \describe{
+#'   \item{Time}{The start time (in seconds) of the scan}
+#'   \item{Vigilant}{How many animals were vigilant during the scan}
+#'   \item{NotVigilant}{How many animals weren't viginlant during the scan}
+#'   \item{OutOfSight}{Number of animals out of sight}
+#'   \item{Treatment }{A factor indicating whether there was no predator, an aerial predator or a terrestrial predator}
+#'   \item{Partner}{Which partner collected the data}
+#'   ...
+#' }
+#' @source Hammond 2019, Vigilance behaviour in meerkats, ASAB Education
+#' @source
+"MeerkatScanData"
+
+

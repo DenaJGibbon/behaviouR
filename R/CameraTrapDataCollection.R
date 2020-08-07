@@ -4,7 +4,7 @@
 #' @param rowstart if data collection was interrupted using the command 'break' which row to use to resume
 #' @param dataframe.cont logical; change to 'TRUE' if data collection was interrupted
 #' @param dataframe.cont logical; change to 'TRUE' if data collection was interrupted
-#'
+#' @param option 'Viewer' or 'Plot' indicates how to print image; 'Viewer' loads faster but may not show entire image
 #' @importFrom magick image_ggplot
 #' @importFrom magick image_read
 #'
@@ -12,6 +12,8 @@
 #' @export
 #'
 #' @examples
+#' \donttest{ CombinedAnimalDF_TimeAdded <- CameraTrapDataCollection(inputfile = CombinedAnimalDF,dataframe.cont=FALSE)}
+
 CameraTrapDataCollection <- function(inputfile=CombinedAnimalDF,rowstart=1,
                                      dataframe.cont=FALSE,option='Viewer'){
 

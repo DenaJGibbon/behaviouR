@@ -7,8 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "dena.clink@cornell.edu")
 Description: As we shift into the online teaching era, we must continue to expand on the ways in which students engage with course material. Across many disciplines the ability to use programming languages is a crucial skill. In addition, working with data ‘hands-on’ can help students understand and synthesize ideas they learn in class. Here I present a new R package and associated tutorials developed explicitly for teaching an online behavior and ecology course. The package comes with six computer lab activities that students can do virtually, covering topics from creating ethograms to biodiversity estimation to analysis of open access camera trap data. I provide thoroughly annotated tutorials for students that outline how to analyze data in RStudio, and the code used to create each tutorial is provided for further modification by course instructors. The exercises are meant for undergraduate students with relatively little coding background but could be easily modified for students of different skill levels. I also provide complementary field lab activities that allow students to actively engage in data collection anywhere in the world. All materials needed to use and modify the R package are open source, which should remove any financial barriers for students or instructors. The R package is available for download on GitHub.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -28,7 +27,6 @@ Imports:
   magick,
   tuneR,
   lme4,
-  bbmle,
   coefplot,
   vegan,
   bayestestR,

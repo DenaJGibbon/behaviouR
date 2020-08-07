@@ -6,6 +6,8 @@
 #' @export
 #'
 #' @examples
+#' \donttest{CameraTrapAnnotations(season=4)}
+
 CameraTrapAnnotations <- function( season= 4){
 
 dataSet <- paste('season',season,'df','.rda',sep = '')

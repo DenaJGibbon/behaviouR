@@ -10,6 +10,8 @@
 #' @export
 #'
 #' @examples
+#' \donttest{CombinedAnimalDF <- CameraTrapDataAccess(urlpath= 'https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped/',season= list(1,2,3),AnimalID='leopard', NumPhotos= 50,create.dir=TRUE)}
+
 
 CameraTrapDataAccess <- function(
   urlpath= 'https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped/',

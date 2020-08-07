@@ -24,3 +24,6 @@ CameraTrapDataCollection(
 \description{
 Function to print each photograph and collect data on the time the photo was taken.
 }
+\examples{
+\donttest{ CombinedAnimalDF_TimeAdded <- CameraTrapDataCollection(inputfile = CombinedAnimalDF,dataframe.cont=FALSE)}
+}

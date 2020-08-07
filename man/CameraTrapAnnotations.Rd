@@ -15,3 +15,6 @@ CameraTrapAnnotations(season = 4)
 \description{
 Function to create a table of available camera trap annotations by season
 }
+\examples{
+\donttest{CameraTrapAnnotations(season=4)}
+}

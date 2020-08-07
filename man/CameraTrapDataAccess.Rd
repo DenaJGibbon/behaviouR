@@ -29,3 +29,6 @@ CameraTrapDataAccess(
 \description{
 Function to access Snapshot Serengeti camera trap photos on the Labeled Information Library of Alexandria: Biology and Conservation http://lila.science/datasets/snapshot-serengeti
 }
+\examples{
+\donttest{CombinedAnimalDF <- CameraTrapDataAccess(urlpath= 'https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped/',season= list(1,2,3),AnimalID='leopard', NumPhotos= 50,create.dir=TRUE)}
+}
