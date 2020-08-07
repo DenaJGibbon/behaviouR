@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 ## Recommended workflow for instructors
 ```{r echo=FALSE,warning=FALSE,message=FALSE,error=FALSE, fig.keep='all'}
 library(ggpubr)
-mainImage <- magick::image_read('/Users/denasmacbook/Desktop/behaviouR/Workflow.png')
+mainImage <- magick::image_read('https://github.com/DenaJGibbon/behaviouRdata/raw/master/Workflow.png')
 (mainImage)
 
 ```
