@@ -5,24 +5,26 @@
 #' @param AnimalID which animal photos to download
 #' @param NumPhotos the number of photos to download
 #' @param create.dir logical; create a new directory (TRUE) or save to current working directory (FALSE)
-#'
+#' @importFrom utils download.file
 #' @return
 #' @export
 #'
 #' @examples
-#' \donttest{CombinedAnimalDF <- CameraTrapDataAccess(urlpath= 'https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped/',season= list(1,2,3),AnimalID='leopard', NumPhotos= 50,create.dir=TRUE)}
+#' \donttest{CombinedAnimalDF <- CameraTrapDataAccess(urlpath=
+#' 'https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped/',
+#' season= list(1,2,3),AnimalID='leopard', NumPhotos= 50,create.dir=TRUE)}
 
 
 CameraTrapDataAccess <- function(
   urlpath= 'https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped/',
-  season= list(1,2), AnimalID='leopard', NumPhotos= 5,create.dir=TRUE){
+  season= list(1,2), AnimalID='leopard', NumPhotos= 5,create.dir=FALSE){
 
 
 if(create.dir==TRUE){
 dir.create(file.path(paste('CameraTrapPhotos',AnimalID,sep='')), showWarnings = FALSE)
 FilePathPhotos <- paste('CameraTrapPhotos',AnimalID, '/',sep='')
 }else{
-  FilePathPhotos <- getwd()
+  FilePathPhotos <- tempdir()
 }
 
 UpdatedCameraTrapDF <- data.frame()

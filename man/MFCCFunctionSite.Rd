@@ -29,3 +29,6 @@ MFCCFunctionSite(
 \description{
 Function to calculate Mel-frequency cepstral coefficents over a list of soundscape recordings
 }
+\examples{
+\donttest{MFCCFunctionSite(input.dir = "FocalRecordings",min.freq = 200,max.freq=10000)}
+}

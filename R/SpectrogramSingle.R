@@ -10,10 +10,14 @@
 #' @importFrom tuneR readWave
 #' @importFrom tuneR downsample
 #' @importFrom signal specgram
+#' @importFrom graphics plot
+#' @importFrom grDevices gray
 #' @return
 #' @export
 #'
 #' @examples
+#' \donttest{SpectrogramSingle(sound.file ="FocalRecordings/FemaleGibbon_1.wav",
+#' min.freq = 500,max.freq=2500,Colors = 'Colors')}
 
 SpectrogramSingle <- function(sound.file, min.freq = 500,max.freq=8000,
                               Colors='BW',downsample=TRUE,downsample.new=16000) {

@@ -12,7 +12,8 @@
 #' @export
 #'
 #' @examples
-#' \donttest{ CombinedAnimalDF_TimeAdded <- CameraTrapDataCollection(inputfile = CombinedAnimalDF,dataframe.cont=FALSE)}
+#' \donttest{ CombinedAnimalDF_TimeAdded <- CameraTrapDataCollection(inputfile =
+#' CombinedAnimalDF,dataframe.cont=FALSE)}
 
 CameraTrapDataCollection <- function(inputfile=CombinedAnimalDF,rowstart=1,
                                      dataframe.cont=FALSE,option='Viewer'){

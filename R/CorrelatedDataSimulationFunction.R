@@ -5,11 +5,15 @@
 #' @param MaleMeanBodyWeight mean body weight of males in the population
 #' @param MaleReproductiveSuccess mean male reproductice success
 #' @importFrom MASS mvrnorm
+#' @importFrom stats cor
 #'
 #' @return
 #' @export CorrelatedDataSimulationFunction
 #'
 #' @examples
+#' CorrelatedDataSimulationFunction(N=5,CorrelationCoefficient= 0.45,
+#' MaleMeanBodyWeight = 125,MaleReproductiveSuccess = 3)
+
 
 CorrelatedDataSimulationFunction <- function(N=100,CorrelationCoefficient=0.83,
                                              MaleMeanBodyWeight = 125,

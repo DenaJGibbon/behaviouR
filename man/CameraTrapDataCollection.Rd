@@ -17,6 +17,8 @@ CameraTrapDataCollection(
 \item{rowstart}{if data collection was interrupted using the command 'break' which row to use to resume}
 
 \item{dataframe.cont}{logical; change to 'TRUE' if data collection was interrupted}
+
+\item{option}{'Viewer' or 'Plot' indicates how to print image; 'Viewer' loads faster but may not show entire image}
 }
 \value{
 
@@ -25,5 +27,6 @@ CameraTrapDataCollection(
 Function to print each photograph and collect data on the time the photo was taken.
 }
 \examples{
-\donttest{ CombinedAnimalDF_TimeAdded <- CameraTrapDataCollection(inputfile = CombinedAnimalDF,dataframe.cont=FALSE)}
+\donttest{ CombinedAnimalDF_TimeAdded <- CameraTrapDataCollection(inputfile =
+CombinedAnimalDF,dataframe.cont=FALSE)}
 }

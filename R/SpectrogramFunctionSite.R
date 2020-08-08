@@ -8,10 +8,14 @@
 #' @importFrom tuneR readWave
 #' @importFrom tuneR downsample
 #' @importFrom signal specgram
+#' @importFrom graphics plot
+#' @importFrom grDevices gray
 #' @return
 #' @export
 #'
 #' @examples
+#' \donttest{SpectrogramFunctionSite(input.dir = "SoundscapeRecordings",
+#' min.freq = 0,max.freq=20000)}
 
 SpectrogramFunctionSite <- function(input.dir, min.freq = 500,max.freq=2500,
                                     Colors='BW') {

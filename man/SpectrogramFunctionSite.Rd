@@ -26,3 +26,7 @@ SpectrogramFunctionSite(
 \description{
 Function to create spectrograms for soundscape recordings
 }
+\examples{
+\donttest{SpectrogramFunctionSite(input.dir = "SoundscapeRecordings",
+min.freq = 0,max.freq=20000)}
+}

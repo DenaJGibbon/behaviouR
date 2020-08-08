@@ -29,3 +29,6 @@ MFCCFunction(
 \description{
 Function to calculate Mel-frequency cepstral coefficents over a list of focal recordings
 }
+\examples{
+\donttest{MFCCFunction(input.dir = "FocalRecordings",min.freq = 200,max.freq=10000)}
+}

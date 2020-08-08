@@ -32,3 +32,7 @@ SpectrogramSingle(
 \description{
 Code to calculate a spectrogram for a single sound file
 }
+\examples{
+\donttest{SpectrogramSingle(sound.file ="FocalRecordings/FemaleGibbon_1.wav",
+min.freq = 500,max.freq=2500,Colors = 'Colors')}
+}

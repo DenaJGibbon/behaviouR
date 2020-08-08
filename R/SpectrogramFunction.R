@@ -9,10 +9,14 @@
 #' @importFrom tuneR readWave
 #' @importFrom tuneR downsample
 #' @importFrom signal specgram
+#' @importFrom graphics plot
+#' @importFrom grDevices gray
 #' @return
 #' @export
 #'
 #' @examples
+#' \donttest{SpectrogramFunction(input.dir = "FocalRecordings",
+#' min.freq = 500,max.freq=2500)}
 
 SpectrogramFunction <- function(input.dir, min.freq = 500,max.freq=2500,
                                 Colors='BW',downsample.new=16000) {

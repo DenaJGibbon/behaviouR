@@ -26,3 +26,7 @@ CorrelatedDataSimulationFunction(
 \description{
 This function simulates a population of deer males where reproductive success is correlated with body size
 }
+\examples{
+CorrelatedDataSimulationFunction(N=5,CorrelationCoefficient= 0.45,
+MaleMeanBodyWeight = 125,MaleReproductiveSuccess = 3)
+}

@@ -13,6 +13,7 @@
 #' @export
 #'
 #' @examples
+#' \donttest{MFCCFunction(input.dir = "FocalRecordings",min.freq = 200,max.freq=10000)}
 
 MFCCFunction <-
   function(input.dir, min.freq = 200, max.freq = 2000,
