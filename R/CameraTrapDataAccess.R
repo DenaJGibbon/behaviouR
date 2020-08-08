@@ -4,7 +4,7 @@
 #' @param season which season to query; options are 1-4, 6-8,10,11
 #' @param AnimalID which animal photos to download
 #' @param NumPhotos the number of photos to download
-#' @param create.dir logical; create a new directory (TRUE) or save to current working directory (FALSE)
+#' @param create.dir logical; create a new directory (TRUE) or save to current temp directory (FALSE); to see temp directory use tempdir()
 #' @importFrom utils download.file
 #' @return
 #' @export
