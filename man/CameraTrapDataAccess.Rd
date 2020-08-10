@@ -2,14 +2,14 @@
 % Please edit documentation in R/CameraTrapDataAccess.R
 \name{CameraTrapDataAccess}
 \alias{CameraTrapDataAccess}
-\title{Function to access Snapshot Serengeti camera trap photos on the Labeled Information Library of Alexandria: Biology and Conservation http://lila.science/datasets/snapshot-serengeti}
+\title{Snapshot Serengeti camera trap access}
 \usage{
 CameraTrapDataAccess(
   urlpath = "https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped/",
   season = list(1, 2),
   AnimalID = "leopard",
   NumPhotos = 5,
-  create.dir = FALSE
+  create.dir = ""
 )
 }
 \arguments{
