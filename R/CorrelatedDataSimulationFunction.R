@@ -7,7 +7,7 @@
 #' @importFrom MASS mvrnorm
 #' @importFrom stats cor
 #'
-#' @return
+#' @return a dataframe
 #' @export CorrelatedDataSimulationFunction
 #'
 #' @examples

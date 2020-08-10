@@ -24,7 +24,7 @@ MFCCFunction(
 \item{num.cep}{the number of cepstra to calculate for each time window}
 }
 \value{
-
+a datframe with a row for each .wav file
 }
 \description{
 Function to calculate Mel-frequency cepstral coefficents over a list of focal recordings

@@ -11,7 +11,7 @@
 #' @importFrom signal specgram
 #' @importFrom graphics plot
 #' @importFrom grDevices gray
-#' @return
+#' @return multiple spectrogram images
 #' @export
 #'
 #' @examples

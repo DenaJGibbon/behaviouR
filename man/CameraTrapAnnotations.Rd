@@ -10,7 +10,7 @@ CameraTrapAnnotations(season = 4)
 \item{season}{which season to query; options are 1-4, 6-8,10,11}
 }
 \value{
-
+a table indicating image sample size
 }
 \description{
 Function to create a table of available camera trap annotations by season

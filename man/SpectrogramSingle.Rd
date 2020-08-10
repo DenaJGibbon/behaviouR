@@ -27,7 +27,7 @@ SpectrogramSingle(
 \item{downsample.new}{<- The frequency (Hz) to downsample to}
 }
 \value{
-
+a spectrogram image
 }
 \description{
 Code to calculate a spectrogram for a single sound file

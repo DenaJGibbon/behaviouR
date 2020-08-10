@@ -21,7 +21,7 @@ CameraTrapDataCollection(
 \item{option}{'Viewer' or 'Plot' indicates how to print image; 'Viewer' loads faster but may not show entire image}
 }
 \value{
-
+a dataframe with an additional column 'Time' with user input values
 }
 \description{
 Function to print each photograph and collect data on the time the photo was taken.

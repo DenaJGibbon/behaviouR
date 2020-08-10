@@ -24,7 +24,7 @@ SpectrogramFunction(
 \item{downsample.new}{<- If downsampling is desired, which frequency (Hz) to use for downsampling}
 }
 \value{
-
+multiple spectrogram images
 }
 \description{
 A function to calculate spectrograms over a set of focal recordings

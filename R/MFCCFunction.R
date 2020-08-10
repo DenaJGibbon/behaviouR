@@ -9,7 +9,7 @@
 #' @importFrom stringr str_split_fixed
 #' @importFrom seewave duration
 #' @importFrom tuneR melfcc
-#' @return
+#' @return a datframe with a row for each .wav file
 #' @export
 #'
 #' @examples

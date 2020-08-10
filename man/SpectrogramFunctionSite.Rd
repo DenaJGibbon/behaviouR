@@ -21,7 +21,7 @@ SpectrogramFunctionSite(
 \item{Colors}{Whether to return a black and white or color spectrogram}
 }
 \value{
-
+multiple spectrogram images
 }
 \description{
 Function to create spectrograms for soundscape recordings

@@ -24,7 +24,7 @@ MFCCFunctionSite(
 \item{num.cep}{the number of cepstra to calculate for each time window}
 }
 \value{
-
+a dataframe with a row for each .wav file
 }
 \description{
 Function to calculate Mel-frequency cepstral coefficents over a list of soundscape recordings

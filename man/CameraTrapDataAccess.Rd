@@ -21,10 +21,10 @@ CameraTrapDataAccess(
 
 \item{NumPhotos}{the number of photos to download}
 
-\item{create.dir}{logical; create a new directory (TRUE) or save to current working directory (FALSE)}
+\item{create.dir}{logical; create a new directory (TRUE) or save to current temp directory (FALSE); to see temp directory use tempdir()}
 }
 \value{
-
+a dataframe with image metadata and downloaded images
 }
 \description{
 Function to access Snapshot Serengeti camera trap photos on the Labeled Information Library of Alexandria: Biology and Conservation http://lila.science/datasets/snapshot-serengeti

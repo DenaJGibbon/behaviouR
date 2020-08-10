@@ -1,3 +1,5 @@
+utils::globalVariables(c("CombinedAnimalDF", "CombinedAnimalDF_TimeAdded"))
+
 #' A simulated data set indicating male red deer roars per minute as a function of mating season or harem-holding status.
 #'
 #' This dataset contains two variables: MaleCategory and RoarsPerMinute

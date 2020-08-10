@@ -8,48 +8,50 @@
 #' @importFrom magick image_ggplot
 #' @importFrom magick image_read
 #'
-#' @return
+#' @return a dataframe with an additional column 'Time' with user input values
 #' @export
 #'
 #' @examples
 #' \donttest{ CombinedAnimalDF_TimeAdded <- CameraTrapDataCollection(inputfile =
 #' CombinedAnimalDF,dataframe.cont=FALSE)}
 
-CameraTrapDataCollection <- function(inputfile=CombinedAnimalDF,rowstart=1,
-                                     dataframe.cont=FALSE,option='Viewer'){
+CameraTrapDataCollection <-
+  function(inputfile = CombinedAnimalDF,
+           rowstart = 1,
+           dataframe.cont = FALSE,
+           option = 'Viewer') {
+    if (dataframe.cont == TRUE) {
+      validation.df <-  CombinedAnimalDF_TimeAdded
+    } else{
+      validation.df <- data.frame()
+    }
 
-if(dataframe.cont==TRUE){
-  validation.df <-  CombinedAnimalDF_TimeAdded
-} else{
-  validation.df <- data.frame()
-}
+    for (a in rowstart:nrow(inputfile)) {
+      if (option == 'Viewer') {
+        temp.detection.df <- inputfile[a, ]
+        print(image_read(as.character(temp.detection.df$filename)))
+      }
 
-for(a in rowstart:nrow(inputfile)){
-  if(option=='Viewer'){
+      if (option == 'Plot') {
+        temp.detection.df <- inputfile[a, ]
+        temp.image <-
+          (magick::image_read(as.character(temp.detection.df$filename)))
+        print(magick::image_ggplot(temp.image))
+      }
 
-  temp.detection.df <- inputfile[a,]
-  print(image_read(as.character(temp.detection.df$filename)))
+      Time <- readline(prompt = "Time taken? ")
+      if (Time == 'break') {
+        print('End loop')
+        print(a)
+        break
+
+      }
+
+      if (Time != 'NA') {
+        new.temp.df <-  cbind.data.frame(temp.detection.df, Time)
+        validation.df <- rbind.data.frame(validation.df, new.temp.df)
+      }
+
+    }
+    return(validation.df)
   }
-
-  if(option=='Plot'){
-    temp.detection.df <- inputfile[a,]
-    temp.image <- (magick::image_read(as.character(temp.detection.df$filename)))
-    print(magick::image_ggplot(temp.image))
-  }
-
-  Time <- readline(prompt = "Time taken? ")
-  if(Time== 'break'){
-    print('End loop')
-    print(a)
-    break
-
-  }
-
-  if(Time!= 'NA'){
-  new.temp.df <-  cbind.data.frame(temp.detection.df,Time)
-  validation.df <- rbind.data.frame(validation.df,new.temp.df)
-  }
-
-}
-return(validation.df)
-}

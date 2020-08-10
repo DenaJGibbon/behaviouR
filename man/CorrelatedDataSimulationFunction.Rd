@@ -21,7 +21,7 @@ CorrelatedDataSimulationFunction(
 \item{MaleReproductiveSuccess}{mean male reproductice success}
 }
 \value{
-
+a dataframe
 }
 \description{
 This function simulates a population of deer males where reproductive success is correlated with body size
