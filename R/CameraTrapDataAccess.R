@@ -22,9 +22,10 @@ CameraTrapDataAccess <-
            AnimalID = 'leopard',
            NumPhotos = 5,
            create.dir = '') {
+
     if (create.dir == '') {
-      print('Value for create.dir missing; user must specify where to store images')
-      break()
+     # print('Value for create.dir missing; user must specify where to store images')
+      stop('Value for create.dir missing; user must specify where to store images')
     }
 
     if (create.dir == TRUE) {
