@@ -7,7 +7,7 @@
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-## Getting started 
+## Getting started
 
 To download the package from GitHub enter the following lines of code
 into R.

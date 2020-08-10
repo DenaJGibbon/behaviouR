@@ -1,6 +1,6 @@
 Package: behaviouR
 Title: an R package for online teaching of fundamental concepts in behavior and ecology
-Version: 0.0.0.9000
+Version: 0.1
 Authors@R: 
     person(given = "Dena",
            family = "Clink",
@@ -30,3 +30,7 @@ Imports:
   vegan,
   bayestestR,
   matlab
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
