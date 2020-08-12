@@ -1,4 +1,4 @@
-utils::globalVariables(c("CombinedAnimalDF", "CombinedAnimalDF_TimeAdded"))
+utils::globalVariables(c("CameraTrapDataOutput", "CombinedAnimalDF_TimeAdded"))
 
 #' A simulated data set indicating male red deer roars per minute as a function of mating season or harem-holding status.
 #'
@@ -60,6 +60,23 @@ utils::globalVariables(c("CombinedAnimalDF", "CombinedAnimalDF_TimeAdded"))
 #' }
 #' @source NA
 "CensusData"
+
+#' A dataframe that is the output of the 'CameraTrapDataAccess' function
+#'
+#' This is a sample dataframe when the 'CameraTrapDataAccess' function is run using defaults
+#'
+#' @format A data frame with 10 rows and 5 variables:
+#' \describe{
+#'   \item{category_id}{A factor indicating which species was detected}
+#'   \item{season}{A factor indicating the season the image was taken}
+#'   \item{location}{The camera trap location}
+#'   \item{filename}{The file path of the downloaded image}
+#'   ...
+#' }
+#' @source Swanson AB, Kosmala M, Lintott CJ, Simpson RJ, Smith A, Packer C (2015) Snapshot Serengeti, high-frequency annotated camera trap images of 40 mammalian species in an African savanna. Scientific Data 2: 150026.
+#' @source http://lila.science/datasets/snapshot-serengeti
+"CameraTrapDataOutput"
+
 
 #' A dataframe containing camera trap data annotations from Snapshot serengeti of zebra and wildebeest
 #'

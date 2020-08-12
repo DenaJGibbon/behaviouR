@@ -13,10 +13,10 @@
 #'
 #' @examples
 #' \donttest{ CombinedAnimalDF_TimeAdded <- CameraTrapDataCollection(inputfile =
-#' CombinedAnimalDF,dataframe.cont=FALSE)}
+#' CameraTrapDataOutput,dataframe.cont=FALSE)}
 
 CameraTrapDataCollection <-
-  function(inputfile = CombinedAnimalDF,
+  function(inputfile = CameraTrapDataOutput,
            rowstart = 1,
            dataframe.cont = FALSE,
            option = 'Viewer') {

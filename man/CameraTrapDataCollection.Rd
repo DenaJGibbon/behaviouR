@@ -5,7 +5,7 @@
 \title{Function to print each photograph and collect data on the time the photo was taken.}
 \usage{
 CameraTrapDataCollection(
-  inputfile = CombinedAnimalDF,
+  inputfile = CameraTrapDataOutput,
   rowstart = 1,
   dataframe.cont = FALSE,
   option = "Viewer"
@@ -28,5 +28,5 @@ Function to print each photograph and collect data on the time the photo was tak
 }
 \examples{
 \donttest{ CombinedAnimalDF_TimeAdded <- CameraTrapDataCollection(inputfile =
-CombinedAnimalDF,dataframe.cont=FALSE)}
+CameraTrapDataOutput,dataframe.cont=FALSE)}
 }
