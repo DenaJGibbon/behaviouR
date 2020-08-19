@@ -24,8 +24,12 @@ CameraTrapDataAccess <-
            create.dir = '') {
 
     if (create.dir == '') {
-     # print('Value for create.dir missing; user must specify where to store images')
       stop('Value for create.dir missing; user must specify where to store images')
+    }
+
+    if (season== 5 | season== 9) {
+      # print('Value for create.dir missing; user must specify where to store images')
+      stop('The specified season is not available; please choose a different season')
     }
 
     if (create.dir == TRUE) {
