@@ -29,7 +29,7 @@ SpectrogramFunctionSite <- function(input.dir, min.freq = 500,max.freq=2500,
 
   for(j in 1:length(subsamps)) {
     short.wav <-subsamps[[j]]
-
+    short.wav <- tuneR::normalize(short.wav)
     temp.spec <- signal::specgram(short.wav@left, Fs = short.wav@samp.rate,
                                   n = 512, overlap = 95)
 

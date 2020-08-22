@@ -30,7 +30,7 @@ SpectrogramSingle <- function(sound.file, min.freq = 500,max.freq=8000,
   Name <- stringr::str_split_fixed(sound.file,pattern = '.wav',n=2)[,1]
   Name <- stringr::str_split_fixed(Name,pattern = '/',n=2)[,2]
 
-
+  short.wav <- tuneR::normalize(short.wav)
     temp.spec <- signal::specgram(short.wav@left, Fs = short.wav@samp.rate,
                                   n = 1024, overlap = 95)
     if(Colors=='BW'){

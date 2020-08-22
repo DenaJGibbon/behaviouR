@@ -23,9 +23,6 @@ devtools::install_github("https://github.com/DenaJGibbon/behaviouR")
 The full tutorials (include scripts as appendices) can be found here:
 <https://bookdown.org/djc426/behaviouR-R-package-tutorials/>.
 
-Links to individual R Scripts can be found here:
-<https://github.com/DenaJGibbon/behaviouRtutorials/tree/master/R%20Scripts%20for%20Labs>
-
 ## Modifying course materials for instructors
 
 You can find and modify the source code for the tutorials by visiting
