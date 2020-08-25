@@ -29,3 +29,9 @@ You can find and modify the source code for the tutorials by visiting
 <https://github.com/DenaJGibbon/behaviouRtutorials> and downloading a
 .zip file. See <https://bookdown.org/yihui/bookdown/> for information on
 how to modify the code.
+
+## Homework templates
+
+Rmarkdown scripts and sample .pdfs of the homework templates can be
+found here:
+<https://github.com/DenaJGibbon/behaviouRtutorials/tree/master/HomeworkTemplates>.
