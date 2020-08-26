@@ -35,3 +35,24 @@ how to modify the code.
 Rmarkdown scripts and sample .pdfs of the homework templates can be
 found here:
 <https://github.com/DenaJGibbon/behaviouRtutorials/tree/master/HomeworkTemplates>.
+
+## Data sheets
+
+If instructors wish to follow the field labs and have students enter
+their own data they can use the following code to export the data to a
+.csv file locally. This will ensure that datasheets are in the correct
+format.
+
+``` r
+data("MeerkatFocalData")
+write.csv(MeerkatFocalData,'MeerkatFocalData.csv', row.names = F)
+
+data("MeerkatScanData")
+write.csv(MeerkatScanData,'MeerkatScanData.csv', row.names = F)
+
+data("BarnacleGooseData")
+write.csv(BarnacleGooseData,'BarnacleGooseData.csv', row.names = F)
+
+data("CensusData")
+write.csv(CensusData,'CensusData.csv', row.names = F)
+```
